@@ -8,4 +8,10 @@ class Adva::Subscription < ActiveRecord::Base
   validates_uniqueness_of :user_id, :scope => [:subscribable_id, :subscribable_type]
 
   named_scope :confirmed, :conditions => "confirmed_at IS NOT NULL"
+
+  def subscribe
+  end
+  
+  def subscribe=(value)
+  end
 end
