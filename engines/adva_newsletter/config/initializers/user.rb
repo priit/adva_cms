@@ -23,7 +23,7 @@ ActionController::Dispatcher.to_prepare do
 end
 
 class UserFormBuilder < ExtensibleFormBuilder
-  after :user, :register do |f|
+  after :user, :default_fields do |f|
     render "adva/subscriptions/signup", :f => f
   end
 end
